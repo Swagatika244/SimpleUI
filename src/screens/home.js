@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, Dimensions, TouchableOpacity, Image } from 'react-native';
-//import Feather from 'react-native-vector-icons/Feather';
-//import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { View, Text, StyleSheet, FlatList, Dimensions, TouchableOpacity, Image, ScrollView } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 
 const dataList = [
@@ -71,6 +71,7 @@ function Home () {
           showsHorizontalScrollIndicator = {false}
         />
       </View>
+      <ScrollView>
       <LinearGradient 
         colors={['#ffffff', '#93e7c6']} 
         style={styles.gradientButtonContainer1}
@@ -81,7 +82,7 @@ function Home () {
             <Text style = {styles.text1}>Buzz Offers</Text>
             <Text style = {styles.text2}>Complete buzz offers to get coins</Text>
           </View>
-          {/*<Feather name = 'zap' size = {50} color = '#ffffff'/>*/}
+          <Feather name = 'zap' size = {50} color = '#ffffff'/>
        </LinearGradient>
       <LinearGradient 
         colors={['#ffffff', '#f67973']} 
@@ -93,7 +94,7 @@ function Home () {
             <Text style = {styles.text1}>Buzz Offers</Text>
             <Text style = {styles.text2}>Complete buzz offers to get coins</Text>
           </View>
-          {/*<MaterialCommunityIcons name = 'format-list-checkbox' size = {50} color = '#ffffff'/>*/}
+          {<MaterialCommunityIcons name = 'format-list-checkbox' size = {50} color = '#ffffff'/>}
        </LinearGradient>
        <View style = {styles.secondBigContainer}>
           <LinearGradient 
@@ -113,6 +114,7 @@ function Home () {
             <Text style = {styles.text3}>Adgate Offer</Text>
           </LinearGradient>
        </View>
+       </ScrollView>
     </View>
   );
 }
@@ -185,7 +187,6 @@ var styles = StyleSheet.create({
     paddingHorizontal: 25,
     alignSelf: 'center',
     marginTop: 15,
-    flexDirection: 'row'
   },
   gradientButtonContainer2: {
     borderRadius: 20,
